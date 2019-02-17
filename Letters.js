@@ -11,7 +11,10 @@ Letter = function (wordLetter) {
   this.hasBeenGuessed = function(guess){
     if(guess === this.wordLetter){
       this.beenGuessed = true;
-    };
+      return true;
+    } else {
+      return false;
+    }
   };
 };
 

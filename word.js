@@ -1,6 +1,6 @@
 var Letter = require("./Letters.js");
 
-var Word = function(guessThisWord) {
+Word = function(guessThisWord) {
   this.wordName = guessThisWord;
   this.wordArrMaker = function(word){
     var guessThisWordArr = word.split(" ").join("").split("");
