@@ -13,14 +13,15 @@ var lettersLeft = guessThisWord.length;
 var word = new Word(guessThisWord);
 
 var guessGame = function () {
-  guessThisWord.displayWord();
+  word.displayWord();
   inquirer.prompt([{
     type: "input",
     name: "letter",
     message: "Guess a letter!"
   }]).then(function (response) {
+    debugger;
     guess(response.letter);
-    if (!game_over) {
+    if (!gameOver) {
       guessGame();
     }
   })
@@ -36,7 +37,7 @@ var guess = function (letter) {
       console.log("You've already guessed that letter.");
       return;
     }
-    var correctLetters = guessThisWord.guessLetter(letter);
+    var correctLetters = word.guessLetter(letter);
     console.log(correctLetters);
     //If user guessed a letter correctly...
     if (correctLetters > 0) {

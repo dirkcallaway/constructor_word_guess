@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dirkcallaway/constructor_word_guess/issues"
   },
-  "homepage": "https://github.com/dirkcallaway/constructor_word_guess#readme"
+  "homepage": "https://github.com/dirkcallaway/constructor_word_guess#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
 }
